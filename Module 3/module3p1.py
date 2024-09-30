@@ -15,15 +15,16 @@ def calculate_meal_purchased():
     total_amount = meal_purchased + tip + tax
 
     # Displays each of these amounts and the total price 
-    print(f"Meal Purchased: $", meal_purchased)
+    print("Meal Purchased: $", meal_purchased)
 
     # Made the tip stop after 2 decimal placements as it keeps going otherwise when most restaurants stop at two decimal places 
-    print(f"Tip of 18%: $", round(tip,2))
+    print("Tip of 18%: $", round(tip,2))
 
     # Made the sales tax stop after 2 decimal placements as it keeps going otherwise when most restaurants stop at two decimal places
-    print(f"Sales Tax of 7%: $", round(tax,2))
+    print("Sales Tax of 7%: $", round(tax,2))
     
-    print(f"Total Amount of a Meal Purchased: $", total_amount)
+    print("Total Amount of a Meal Purchased: $", total_amount)
 
 # This would call the function to run the program for the first part of Module 3 
 calculate_meal_purchased()
+
