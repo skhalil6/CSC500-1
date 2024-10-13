@@ -3,10 +3,10 @@
 def average_rainfall_years():
     # The program should first ask for the number of years 
     years = int(input("The number of years? "))
+
     # the total inches of the rain fall 
     inches = 0
-    # the total number of months 
-    months = years * 12 
+
     # The outer loop will iterate once for each year 
     for years in range(1, years + 1):
         print(f"Year {years}:")
@@ -17,10 +17,15 @@ def average_rainfall_years():
             inches += rainfall
 
     # Calculate the average rainfall over a period of years 
-    if months <= 0: 
-        average_rainfall = 0
-    else: 
-        average_rainfall = inches/months 
+    try: 
+        # the total number of months 
+        months = years * 12 
+        if months > 0:
+            average_rainfall = inches/months
+        else:
+            average_rainfall = 0
+    except ValueError:
+            print("Please enter a valid number.")
 
     # The program should display the number of months, the total inches of rainfall and the average rainfall per month for the entire period 
     print("Number of months: ", months)
